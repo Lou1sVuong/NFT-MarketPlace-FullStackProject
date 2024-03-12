@@ -7,7 +7,7 @@ interface ButtonProps {
     width?: string | number;
   }
   
-  function Button({ style, rightIcon, leftIcon, onClick, children, width }: ButtonProps) {
+  function Button({ style, rightIcon, leftIcon, onClick, children, width ,}: ButtonProps) {
     const getButtonStyle = () => {
       switch (style) {
         case 'primary':
@@ -32,7 +32,7 @@ interface ButtonProps {
     };
   
     return (
-      <button className={`cursor-pointer inline-flex justify-center py-0 px-[3.125rem] items-center gap-3 flex-shrink-0 rounded-[1.25rem] ${getButtonStyle()}`} style={buttonStyle} onClick={onClick}>
+      <button className={`cursor-pointer inline-flex justify-center py-0 px-[3.125rem] items-center gap-3 flex-shrink-0 rounded-[1.25rem]  ${getButtonStyle()}`} style={buttonStyle} onClick={onClick}>
         {leftIcon && <span className="mr-2">{leftIcon}</span>}
         <span className="flex justify-center items-center gap-3">{children}</span>
         {rightIcon && <span className="ml-2">{rightIcon}</span>}

@@ -1,6 +1,8 @@
 import monkeyDance from './assets/images/avatars/monkeyD.svg'
 import icon from './assets/images/infoCard/CreateCollectionIcon.svg'
 import Button from './components/common/Button'
+import HeroSection from './components/home/HeroSection'
+import HighlightedNFT from './components/home/HighlightedNFT'
 import Nav from './components/home/Nav'
 function App() {
   return (
@@ -39,7 +41,8 @@ function App() {
       <Button style="nofillTertiary" onClick={() => console.log('clicked')}>
         Click me 
       </Button>
-      
+      <HighlightedNFT/>
+      <HeroSection/>
     </div>
     
 
