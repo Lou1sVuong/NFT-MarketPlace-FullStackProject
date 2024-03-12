@@ -4,6 +4,9 @@ import TopRatedArtists from "../components/homePage/TopRatedArtists"
 import TrendingCollection from "../components/homePage/TrendingCollection"
 import BrowseCategories from "../components/homePage/BrowseCategories"
 import Discover from "../components/homePage/Discover"
+import Countdown from "../components/homePage/Countdown"
+import NFTHighlight from "../components/homePage/NFTHighlight"
+import HowItWork from "../components/homePage/HowItWork"
 
 function Home() {
   return (
@@ -14,6 +17,8 @@ function Home() {
       <TopRatedArtists />
       <BrowseCategories />
       <Discover />
+      <NFTHighlight />
+      <HowItWork />
     </div>
   )
 }

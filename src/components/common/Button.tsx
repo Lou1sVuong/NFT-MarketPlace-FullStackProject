@@ -1,5 +1,5 @@
 interface ButtonProps {
-    style?: 'primary' | 'secondary' | 'nofillPrimary' | 'nofillSecondary' | 'tertiary' | 'nofillTertiary';
+    style?: 'primary' | 'secondary' | 'nofillPrimary' | 'nofillSecondary' | 'tertiary' | 'nofillTertiary' | 'white';
     rightIcon?: React.ReactNode;
     leftIcon?: React.ReactNode;
     onClick?: () => void;
@@ -22,6 +22,8 @@ interface ButtonProps {
           return 'h-[3.75rem] border-2 border-solid border-callAcction text-textW';
         case 'nofillTertiary':
           return 'h-[2.875rem] border-2 border-solid border-callAcction text-textW';
+        case 'white':
+          return 'h-[3.75rem]  bg-white text-bg';
         default:
           return '';
       }
