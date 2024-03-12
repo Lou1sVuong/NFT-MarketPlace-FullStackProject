@@ -5,21 +5,26 @@ interface MockData {
   totalSale: number;
   description: string;
 }
+interface Introduction {
+  title: string;
+  description: string;
+}
 const mockData: MockData[] = [
   { totalSale: 240, description: "Total Sale" },
   { totalSale: 150, description: "Auctions" },
   { totalSale: 300, description: "Artists" },
 ];
+
+const Introduction: Introduction[] = [
+  { title: "Discover digital art & Collect NFTs", description: "NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists." },
+];
 function HeroSection() {
   return (
     <div className="flex items-center justify-center gap-8 text-textW">
       <div className="flex  flex-col w-[31rem] gap-5">
-        <h1 className=" text-7xl font-semibold">
-          Discover digital art & Collect NFTs
-        </h1>
+        <h1 className=" text-7xl font-semibold">{Introduction[0].title}</h1>
         <p className="text-[1.375rem] font-normal">
-          NFT marketplace UI created with Anima for Figma. Collect, buy and sell
-          art from more than 20k NFT artists.
+          {Introduction[0].description}
         </p>
         <div>
           <Button style="secondary" onClick={() => console.log("clicked")}>
