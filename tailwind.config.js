@@ -8,9 +8,9 @@ export default {
     extend: {
       colors: {
         // Background & Text
-        'bg': '#3B3B3B',
+        'bg': '#2B2B2B',
         'bgsecondary': '#3B3B3B',
-        'captiontext': '#3B3B3B',
+        'captiontext': '#858584',
         'textW': '#FFF',
         // Call to Action
         'callAcction': '#A259FF',
