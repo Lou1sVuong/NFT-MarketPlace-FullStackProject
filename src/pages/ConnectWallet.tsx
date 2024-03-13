@@ -41,9 +41,9 @@ function ConnectWallet() {
                             <Link key={index} to={wallet.route}>
                                 <div className='flex mt-5'>
                                     <div  className='inline-block bg-bgsecondary rounded-[1.25rem]'>
-                                        <div className='flex justify-between items-center gap-5 px-10 py-3 w-[20rem]'>
+                                        <div className='flex  items-center gap-8 px-10 py-3 w-[20rem]'>
                                             <img src={wallet.icon} alt="" />
-                                            <p className='text-[1.375rem] font-semibold pr-20 '>{wallet.name}</p>
+                                            <div className='text-[1.375rem]  font-semibold  '>{wallet.name}</div>
                                         </div>
                                     </div>
                                 </div>

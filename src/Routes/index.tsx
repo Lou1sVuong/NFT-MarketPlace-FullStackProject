@@ -6,6 +6,7 @@ import SignIn from "../pages/SignIn";
 import MarketPlace from "../pages/MarketPlace";
 import Register from "../pages/Register";
 import ResetPass from "../pages/ResetPass";
+import Rankings from "../pages/Rankings";
 
 
 interface Route {
@@ -42,6 +43,11 @@ const publicRoutes: Route[] = [
     {
         path: "/ResetPassword",
         component: ResetPass,
+        layout: MainLayout
+    },
+    {
+        path: "/Rankings",
+        component: Rankings,
         layout: MainLayout
     },
 ];
