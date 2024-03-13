@@ -12,7 +12,6 @@ import Register from "./Register"
 function Home() {
   return (
     <div className="bg-bg">
-      <Nav />
       <HeroSection />
       <TrendingCollection />
       <TopRatedArtists />
@@ -21,11 +20,6 @@ function Home() {
       <NFTHighlight />
       <HowItWork />
       <SubscribeWidget />
-      <Footer />
-      <Nav />
-      <Register />
-      <Footer />
-
     </div>
   )
 }
