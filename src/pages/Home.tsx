@@ -8,7 +8,7 @@ import NFTHighlight from "../components/homePage/NFTHighlight"
 import HowItWork from "../components/homePage/HowItWork"
 import SubscribeWidget from "../components/homePage/SubscribeWidget"
 import Footer from "../components/common/Footer"
-
+import Register from "./Register"
 function Home() {
   return (
     <div className="bg-bg">
@@ -22,6 +22,10 @@ function Home() {
       <HowItWork />
       <SubscribeWidget />
       <Footer />
+      <Nav />
+      <Register />
+      <Footer />
+
     </div>
   )
 }

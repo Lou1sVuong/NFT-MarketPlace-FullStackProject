@@ -72,7 +72,7 @@ const categories = [
 function BrowseCategories() {
   return (
     <div className="py-20 px-40">
-      <h3 className="text-textW text-[2.375rem] font-semibold">
+      <h3 className="text-textW text-[2.375rem] font-semibold mb-14">
         Browse Categories
       </h3>
       <div className="grid grid-cols-4 gap-y-8">

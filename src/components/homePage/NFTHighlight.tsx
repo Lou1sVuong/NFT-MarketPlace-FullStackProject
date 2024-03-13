@@ -25,7 +25,7 @@ function NFTHighlight() {
                             </Button>
                         </div>
                     </div>
-                    <div className='absolute bottom-0 right-0'><Countdown hours={24} /></div>
+                    <div className='absolute bottom-0 right-0'><Countdown hours={68} /></div>
                 </div>
             </div>
             <img className='w-full h-full object-cover' src={NFTHightlightBG} alt="" />

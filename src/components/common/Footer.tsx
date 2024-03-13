@@ -6,7 +6,7 @@ import InstagramLogo from '../../assets/icons/InstagramLogo.svg'
 import Subscribe from './Subscribe';
 function Footer() {
   return (
-    <div className="py-10 px-40">
+    <div className="py-10 px-40 bg-bgsecondary">
       <div className='flex justify-between'>
         {/* col */}
         <div>

@@ -5,7 +5,7 @@ import Button from "./Button";
 
 function Nav() {
   return (
-    <nav className=" flex z-10 items-center justify-between  w-full py-5 px-[3.125rem] text-textW text-center text-base font-semibold bg-bg">
+    <nav className=" flex z-10 items-center justify-between  w-full py-5 px-[3.125rem] text-textW text-center text-base font-semibold bg-bgsecondary">
       <div>
         <a href="/"><img src={logo} alt=""></img></a>
       </div>
