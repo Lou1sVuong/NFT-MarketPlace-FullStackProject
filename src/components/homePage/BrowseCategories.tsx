@@ -79,7 +79,7 @@ function BrowseCategories() {
         {categories.map((category) => (
           <div
             key={category.id}
-            className="col-span-1 relative w-[17rem] rounded-[1.5rem] overflow-hidden"
+            className="col-span-1 relative w-[16rem] rounded-[1.5rem] overflow-hidden"
           >
             <div>
               <img

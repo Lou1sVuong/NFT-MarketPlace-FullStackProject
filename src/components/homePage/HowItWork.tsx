@@ -31,9 +31,9 @@ function HowItWork() {
                     
                 </div>
             </div>
-            <div className='grid grid-cols-3  w-full justify-center'>
+            <div className='grid grid-cols-3  w-full '>
                 { infoCardData.map((item, index) => (
-                    <div key={index} className='flex flex-col items-center justify-center text-center px-8 pt-1 pb-8 w-[22.5rem] bg-bgsecondary rounded-3xl'>
+                    <div key={index} className='flex flex-col items-center justify-center text-center px-8 pt-1 pb-8 w-[22rem] bg-bgsecondary rounded-3xl'>
                         <img src={item.image} alt="" />
                         <h5 className='text-[1.375rem] text-textW font-semibold pb-3'>{item.title}</h5>
                         <p className='text-base font-normal line-clamp-3'>{item.description}</p>
