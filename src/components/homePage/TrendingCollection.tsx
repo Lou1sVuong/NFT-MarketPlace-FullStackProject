@@ -1,52 +1,9 @@
 import React from 'react';
 import CollectionCard from './CollectionCard';
-import tempPicture from '../../assets/images/homePage/trendingCollection/TrendingCollection.svg';
+import trendingCollection from '../../mockData/HomePage/trendingCollection'
 const TrendingCollection: React.FC = () => {
-    const jsonData = [
-        {
-            mainImage: tempPicture,
-            galleryImages: [
-                tempPicture,
-                tempPicture,
-                tempPicture,
-                tempPicture,
-                tempPicture,
-            ],
-            title: 'Happy Robots',
-            profileImage: tempPicture,
-            username: 'Robotica',
-            rank: 1,
-        },
-        {
-            mainImage: tempPicture,
-            galleryImages: [
-                tempPicture,
-                tempPicture,
-                tempPicture,
-                tempPicture,
-                tempPicture,
-            ],
-            title: 'Smiling Androids 3',
-            profileImage: tempPicture,
-            username: 'AndroidJoy',
-            rank: 3,
-        },
-        {
-            mainImage: tempPicture,
-            galleryImages: [
-                tempPicture,
-                tempPicture,
-                tempPicture,
-                tempPicture,
-                tempPicture,
-            ],
-            title: 'Smiling Androids',
-            profileImage: tempPicture,
-            username: 'AndroidJoy',
-            rank: 2,
-        },
-    ];
-    const sortedData = [...jsonData].sort((a, b) => a.rank - b.rank);
+    
+    const sortedData = [...trendingCollection].sort((a, b) => a.rank - b.rank);
 
     return (
         <div className='py-20 px-40 text-textW'>

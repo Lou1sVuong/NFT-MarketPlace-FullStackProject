@@ -1,85 +1,8 @@
 import React, { useState } from "react";
 import InputForm from "../components/common/InputForm";
 import NFTcard from "../components/homePage/NFTcard";
-import Space from "../assets/images/homePage/Discover/Space.svg";
-import Astronaut from "../assets/images/homePage/Discover/Astronaut.svg";
-import Sunset from "../assets/images/homePage/Discover/Sunset.svg";
-import TempAvatar from "../assets/images/avatars/RustyRobot.svg";
+import marketPlace from '../mockData/MarketPlace/NFTs';
 
-const jsonData = [
-    {
-        image: Space,
-        title: "NFT Name",
-        avatar: TempAvatar,
-        username: "NFT Artist",
-        price: 1.63,
-        highestBid: 0.33,
-    },
-    {
-        image: Astronaut,
-        title: "NFT Name",
-        avatar: TempAvatar,
-        username: "NFT Artist",
-        price: 1.63,
-        highestBid: 0.33,
-    },
-    {
-        image: Sunset,
-        title: "NFT Name",
-        avatar: TempAvatar,
-        username: "NFT Artist",
-        price: 1.63,
-        highestBid: 0.33,
-    },
-    {
-        image: Space,
-        title: "NFT Name",
-        avatar: TempAvatar,
-        username: "NFT Artist",
-        price: 1.63,
-        highestBid: 0.33,
-    },
-    {
-        image: Astronaut,
-        title: "NFT Name",
-        avatar: TempAvatar,
-        username: "NFT Artist",
-        price: 1.63,
-        highestBid: 0.33,
-    },
-    {
-        image: Sunset,
-        title: "NFT Name",
-        avatar: TempAvatar,
-        username: "NFT Artist",
-        price: 1.63,
-        highestBid: 0.33,
-    },
-    {
-        image: Space,
-        title: "NFT Name",
-        avatar: TempAvatar,
-        username: "NFT Artist",
-        price: 1.63,
-        highestBid: 0.33,
-    },
-    {
-        image: Astronaut,
-        title: "NFT Name",
-        avatar: TempAvatar,
-        username: "NFT Artist",
-        price: 1.63,
-        highestBid: 0.33,
-    },
-    {
-        image: Sunset,
-        title: "NFT Name",
-        avatar: TempAvatar,
-        username: "NFT Artist",
-        price: 1.63,
-        highestBid: 0.33,
-    },
-];
 const MarketPlace: React.FC = () => {
     const [activeTab, setActiveTab] = useState(0);
 
@@ -151,7 +74,7 @@ const MarketPlace: React.FC = () => {
                 <div className="tab-content">
                     {activeTab === 0 && (
                         <div className="grid grid-cols-3 justify-between gap-y-10 py-[3.75rem]">
-                            {jsonData.map((item, index) => (
+                            {marketPlace.map((item, index) => (
                                 <NFTcard key={index} data={item} />
                             ))}
                         </div>

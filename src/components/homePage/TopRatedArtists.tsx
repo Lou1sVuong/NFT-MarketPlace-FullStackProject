@@ -1,87 +1,10 @@
 import Button from '../common/Button';
 import ArtistCard from './ArtistCard';
-import tempAvatar from '../../assets/images/avatars/robotica.svg';
+import topcreators from '../../mockData/HomePage/topcreators';
 
 const TopRatedArtists: React.FC = () => {
-    const jsonData = [
-        {
-            rank: 1,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        {
-            rank: 3,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        {
-            rank: 2,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        {
-            rank: 5,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        {
-            rank: 6,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        {
-            rank: 4,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        // fjfkdfjdkfjd
-        {
-            rank: 7,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        {
-            rank: 8,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        {
-            rank: 9,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        {
-            rank: 10,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        {
-            rank: 11,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        {
-            rank: 12,
-            avatar: tempAvatar,
-            username: 'robotica',
-            totalSales: 34.5,
-        },
-        
-        
-
-    ];
-    const sortedData = [...jsonData].sort((a, b) => a.rank - b.rank);
+    
+    const sortedData = [...topcreators].sort((a, b) => a.rank - b.rank);
 
     return (
         <div className='py-20 px-40 text-textW'>
