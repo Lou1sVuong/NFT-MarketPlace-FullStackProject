@@ -5,7 +5,7 @@ function MainLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Nav />
-      <div>{children}</div>
+      <div className="pt-24">{children}</div>
       <Footer />
     </div>
   );

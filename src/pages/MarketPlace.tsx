@@ -3,6 +3,7 @@ import NFTcard from "../components/homePage/NFTcard";
 import marketPlace from '../mockData/MarketPlace/NFTs';
 import Search from "../components/common/Search";
 import useScrollToTop from "../hooks/useScrollTop";
+import { Link } from "react-router-dom";
 
 const MarketPlace: React.FC = () => {
     useScrollToTop();
@@ -53,7 +54,7 @@ const MarketPlace: React.FC = () => {
                     {activeTab === 0 && (
                             <div className="grid grid-cols-3 justify-between gap-y-10 py-[3.75rem]">
                                 {marketPlace.map((item, index) => (
-                                    <NFTcard key={index} data={item} />
+                                    <Link key={index} to="/detailNFT"><NFTcard  data={item} /></Link>
                                 ))}
                             </div>
                     )}

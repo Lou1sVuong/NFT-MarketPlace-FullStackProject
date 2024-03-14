@@ -8,6 +8,7 @@ import Register from "../pages/Register";
 import ResetPass from "../pages/ResetPass";
 import Rankings from "../pages/Rankings";
 import ArtistPage from "../pages/ArtistPage";
+import detailNFT from "../pages/detailNFT";
 
 
 interface Route {
@@ -54,6 +55,11 @@ const publicRoutes: Route[] = [
     {
         path: "/ArtistPage",
         component: ArtistPage,
+        layout: MainLayout
+    },
+    {
+        path: "/detailNFT",
+        component: detailNFT,
         layout: MainLayout
     },
 ];

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 interface CountdownProps {
   hours: number;
+  children?: React.ReactNode;
 }
 
-const Countdown: React.FC<CountdownProps> = ({ hours }) => {
+const Countdown: React.FC<CountdownProps> = ({ hours, children }) => {
   const [timeLeft, setTimeLeft] = useState<number>(hours * 3600);
 
   useEffect(() => {
@@ -26,17 +27,18 @@ const Countdown: React.FC<CountdownProps> = ({ hours }) => {
     const minutes = Math.floor((time % 3600) / 60);
     const seconds = time % 60;
 
-    return `${hours.toString().padStart(2, '0')}  : ${minutes
+    return `${hours.toString().padStart(2, "0")}  : ${minutes
       .toString()
-      .padStart(2, '0')} : ${seconds.toString().padStart(2, '0')}`;
+      .padStart(2, "0")} : ${seconds.toString().padStart(2, "0")}`;
   };
 
   return (
     <div className="flex justify-center text-textW backdrop backdrop-blur-sm w-[18rem] rounded-[1.25rem] bg-[#3B3B3B80]">
-        <div className='flex flex-col  w-[80%] p-4'>
-            <div>Auction ends in:</div>
-            <div className="text-[2.375rem] font-bold">{formatTime(timeLeft)}</div>
-        </div>
+      <div className="flex flex-col  w-[80%] p-4">
+        <div>Auction ends in:</div>
+        <div className="text-[2.375rem] font-bold">{formatTime(timeLeft)}</div>
+        <div className="w-full flex justify-center items-center mt-2">{children}</div>
+      </div>
     </div>
   );
 };
