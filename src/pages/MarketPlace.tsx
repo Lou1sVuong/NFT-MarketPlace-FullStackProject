@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import InputForm from "../components/common/InputForm";
 import NFTcard from "../components/homePage/NFTcard";
 import marketPlace from '../mockData/MarketPlace/NFTs';
 import Search from "../components/common/Search";
