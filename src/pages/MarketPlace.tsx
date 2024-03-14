@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import InputForm from "../components/common/InputForm";
 import NFTcard from "../components/homePage/NFTcard";
 import marketPlace from '../mockData/MarketPlace/NFTs';
+import Search from "../components/common/Search";
 
 const MarketPlace: React.FC = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -14,7 +15,7 @@ const MarketPlace: React.FC = () => {
                     Browse through more than 50k NFTs on the NFT Marketplace.
                 </p>
                 <div className="w-full my-8">
-                    <InputForm
+                    {/* <InputForm
                         placeholder="Search your favourite NFTs"
                         rightIcon={
                             <svg
@@ -38,7 +39,8 @@ const MarketPlace: React.FC = () => {
                                 />
                             </svg>
                         }
-                    />
+                    /> */}
+                    <Search />
                 </div>
             </div>
             {/* tab */}
