@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import Image from '../assets/images/NotFound/NotFound.png';
 import Button from '../components/common/Button';
+import useScrollToTop from '../hooks/useScrollTop';
 function NotFound() {
+  useScrollToTop();
   return (
     <div className='flex justify-center items-center px-20 py-20'>
       <div className='flex flex-col justify-center items-center gap-2 w-[60%] text-textW px-10 py-10 rounded-3xl bg-bg'>

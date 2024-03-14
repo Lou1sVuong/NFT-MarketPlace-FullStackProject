@@ -1,6 +1,7 @@
 import Button from "../common/Button";
 import HighlightedNFT from "./HighlightedNFT";
 
+
 interface MockData {
   totalSale: number;
   description: string;

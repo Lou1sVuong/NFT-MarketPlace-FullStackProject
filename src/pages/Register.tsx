@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import Poster from '../assets/images/registerPage/Poster.png';
 import Button from '../components/common/Button';
 import InputForm from '../components/common/InputForm';
+import useScrollToTop from '../hooks/useScrollTop';
 function Register() {
+    useScrollToTop();
     return (
         <div className='w-full h-[40rem] flex gap-[3.75rem] text-textW bg-bg'>
             <div className='w-[50%] overflow-hidden'><img src={Poster} alt="" className='w-full h-[40rem] object-cover ' />

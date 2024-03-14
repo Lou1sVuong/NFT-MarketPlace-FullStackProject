@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import NFTcard from "../components/homePage/NFTcard";
 import marketPlace from '../mockData/MarketPlace/NFTs';
 import Search from "../components/common/Search";
-import { Link } from "react-router-dom";
+import useScrollToTop from "../hooks/useScrollTop";
 
 const MarketPlace: React.FC = () => {
+    useScrollToTop();
     const [activeTab, setActiveTab] = useState(0);
 
     return (

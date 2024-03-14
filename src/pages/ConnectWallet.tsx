@@ -28,8 +28,8 @@ const Wallets: ConnectWalletProps[] = [
         route: '/Coinbase'
     }
 ]
-useScrollToTop();
 function ConnectWallet() {
+    useScrollToTop();
     return (
         <div className='w-full h-[40rem] flex gap-[3.75rem] text-textW bg-bg'>
             <div className='w-[50%] overflow-hidden'><img src={Poster} alt="" className='w-full h-[40rem] object-cover ' /></div>

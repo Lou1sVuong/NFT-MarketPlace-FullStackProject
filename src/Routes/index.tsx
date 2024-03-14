@@ -7,6 +7,7 @@ import MarketPlace from "../pages/MarketPlace";
 import Register from "../pages/Register";
 import ResetPass from "../pages/ResetPass";
 import Rankings from "../pages/Rankings";
+import ArtistPage from "../pages/ArtistPage";
 
 
 interface Route {
@@ -48,6 +49,11 @@ const publicRoutes: Route[] = [
     {
         path: "/Rankings",
         component: Rankings,
+        layout: MainLayout
+    },
+    {
+        path: "/ArtistPage",
+        component: ArtistPage,
         layout: MainLayout
     },
 ];

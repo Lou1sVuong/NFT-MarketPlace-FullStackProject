@@ -30,7 +30,7 @@ const TopRatedArtists: React.FC = () => {
             </div>
             <div className='grid grid-cols-4 gap-x-8 gap-y-8'>
                 {sortedData.map((item, index) => (
-                    <ArtistCard key={index} data={item} />
+                    <Link to='/ArtistPage'><ArtistCard key={index} data={item} /></Link>
                 ))}
             </div>
         </div>

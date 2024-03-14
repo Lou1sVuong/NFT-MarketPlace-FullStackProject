@@ -5,9 +5,11 @@ import todayRankingList from "../mockData/Rankings/todayRankingList";
 import weekRankingList from "../mockData/Rankings/weekRankingList";
 import monthRankingList from "../mockData/Rankings/monthRankingList";
 import allRankingList from "../mockData/Rankings/allRankingList";
+import useScrollToTop from "../hooks/useScrollTop";
 
 
 const Rankings: React.FC = () => {
+  useScrollToTop();
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -25,7 +27,7 @@ const Rankings: React.FC = () => {
             className={`${
               activeTab === 0
                 ? "border-b-[3px] border-captiontext flex justify-around w-[50%] bg-bg py-3"
-                : "flex justify-around w-[50%] bg-bg py-3"
+                : "border-b-[3px] border-bg flex justify-around w-[50%] bg-bg py-3"
             }`}
           >
             <button
@@ -41,7 +43,7 @@ const Rankings: React.FC = () => {
             className={`${
               activeTab === 1
                 ? "border-b-[3px] border-captiontext flex justify-around w-[50%] bg-bg py-3"
-                : "flex justify-around w-[50%] bg-bg py-3"
+                : "border-b-[3px] border-bg flex justify-around w-[50%] bg-bg py-3"
             }`}
           >
             <button
@@ -57,7 +59,7 @@ const Rankings: React.FC = () => {
             className={`${
               activeTab === 2
                 ? "border-b-[3px] border-captiontext flex justify-around w-[50%] bg-bg py-3"
-                : "flex justify-around w-[50%] bg-bg py-3"
+                : "border-b-[3px] border-bg flex justify-around w-[50%] bg-bg py-3"
             }`}
           >
             <button
@@ -73,7 +75,7 @@ const Rankings: React.FC = () => {
             className={`${
               activeTab === 3
                 ? "border-b-[3px] border-captiontext flex justify-around w-[50%] bg-bg py-3"
-                : "flex justify-around w-[50%] bg-bg py-3"
+                : "border-b-[3px] border-bg flex justify-around w-[50%] bg-bg py-3"
             }`}
           >
             <button
@@ -86,6 +88,7 @@ const Rankings: React.FC = () => {
             </button>
           </div>
         </div>
+        {/* content tab */}
         <div className="w-full">
           {activeTab === 0 && (
             <>
