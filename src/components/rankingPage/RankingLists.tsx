@@ -25,7 +25,7 @@ function RankingLists({ data }: RankingListsProps) {
           {/* body */}
           <div className="flex w-full items-center text-nowrap text-left bg-bgsecondary rounded-[1.25rem] px-5 py-4">
             <div className="w-[10%]">
-              <p className="inline-block text-center h-8 w-8 rounded-full bg-bg">{rank}</p>
+              <div className="inline-block  text-base text-captiontext  rounded-full bg-bg"><p className='flex text-center justify-center items-center h-8 w-8 '>{rank}</p></div>
             </div>
             <div className="w-[40%] flex gap-4 items-center">
               <img className='h-[2.2rem] w-[2.2rem] rounded-full' src={artist.avatar} alt={artist.name} />
