@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NFTcard from "../components/homePage/NFTcard";
 import marketPlace from '../mockData/MarketPlace/NFTs';
 import Search from "../components/common/Search";
+import { Link } from "react-router-dom";
 
 const MarketPlace: React.FC = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -19,41 +20,41 @@ const MarketPlace: React.FC = () => {
             </div>
             {/* tab */}
             <div className="w-full bg-bg px-40 text-textW">
-                <div className="flex justify-around w-full bg-rose-300">
-                    <div
-                        className={`${activeTab === 0
-                                ? "border-b-[3px] border-captiontext flex justify-around w-[50%] bg-bg py-3"
-                                : "flex justify-around w-[50%] bg-bg py-3"
-                            }`}
-                    >
-                        <button
-                            onClick={() => setActiveTab(0)}
-                            className={`h-full w-full ${activeTab === 0 ? "text-white" : "text-captiontext"}`}
+                <div className="flex justify-around w-ful">
+                        <div
+                            className={`${activeTab === 0
+                                    ? "border-b-[3px] border-captiontext flex justify-around w-[50%] bg-bg py-3"
+                                    : "flex justify-around w-[50%] bg-bg py-3"
+                                }`}
                         >
-                            NFTs
-                        </button>
-                    </div>
-                    <div
-                        className={`${activeTab === 1
-                                ? "border-b-[3px] border-captiontext flex justify-around w-[50%] bg-bg py-3"
-                                : "flex justify-around w-[50%] bg-bg py-3"
-                            }`}
-                    >
-                        <button
-                            onClick={() => setActiveTab(1)}
-                            className={`h-full w-full ${activeTab === 1 ? "text-white" : "text-captiontext"}`}
+                            <button
+                                onClick={() => setActiveTab(0)}
+                                className={`h-full w-full ${activeTab === 0 ? "text-white" : "text-captiontext"}`}
+                            >
+                                NFTs
+                            </button>
+                        </div>
+                        <div
+                            className={`${activeTab === 1
+                                    ? "border-b-[3px] border-captiontext flex justify-around w-[50%] bg-bg py-3"
+                                    : "flex justify-around w-[50%] bg-bg py-3"
+                                }`}
                         >
-                            Collections
-                        </button>
-                    </div>
+                            <button
+                                onClick={() => setActiveTab(1)}
+                                className={`h-full w-full ${activeTab === 1 ? "text-white" : "text-captiontext"}`}
+                            >
+                                Collections
+                            </button>
+                        </div>
                 </div>
                 <div className="tab-content">
                     {activeTab === 0 && (
-                        <div className="grid grid-cols-3 justify-between gap-y-10 py-[3.75rem]">
-                            {marketPlace.map((item, index) => (
-                                <NFTcard key={index} data={item} />
-                            ))}
-                        </div>
+                            <div className="grid grid-cols-3 justify-between gap-y-10 py-[3.75rem]">
+                                {marketPlace.map((item, index) => (
+                                    <NFTcard key={index} data={item} />
+                                ))}
+                            </div>
                     )}
                     {activeTab === 1 &&
                         <div className="flex justify-center w-full px-40 py-[5rem] text-6xl">

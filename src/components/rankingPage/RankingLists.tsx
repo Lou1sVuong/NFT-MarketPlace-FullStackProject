@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface ArtistData {
   avatar: string;
@@ -14,6 +13,7 @@ interface RankingListsProps {
     volume: number;
   };
 }
+
 
 function RankingLists({ data }: RankingListsProps) {
   const { rank, artist, change, nftSold, volume } = data;

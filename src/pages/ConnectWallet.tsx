@@ -3,6 +3,7 @@ import Metamask from '../assets/icons/Metamask.svg';
 import WalletConnect from '../assets/icons/WalletConnect.svg';
 import Coinbase from '../assets/icons/Coinbase.svg';
 import { Link } from 'react-router-dom';
+import useScrollToTop from '../hooks/useScrollTop';
 
 interface ConnectWalletProps {
     icon: string;
@@ -27,7 +28,7 @@ const Wallets: ConnectWalletProps[] = [
         route: '/Coinbase'
     }
 ]
-
+useScrollToTop();
 function ConnectWallet() {
     return (
         <div className='w-full h-[40rem] flex gap-[3.75rem] text-textW bg-bg'>

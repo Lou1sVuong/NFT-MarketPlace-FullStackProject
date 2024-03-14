@@ -6,6 +6,7 @@ import weekRankingList from "../mockData/Rankings/weekRankingList";
 import monthRankingList from "../mockData/Rankings/monthRankingList";
 import allRankingList from "../mockData/Rankings/allRankingList";
 
+
 const Rankings: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
