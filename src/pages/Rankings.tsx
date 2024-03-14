@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-// import InputForm from "../components/common/InputForm";
-import tempAvatar from "../assets/images/avatars/RustyRobot.svg";
-// import NFTcard from "../components/homePage/NFTcard";
+import RankingLists from "../components/rankingPage/RankingLists";
+import HeaderList from "../components/rankingPage/HeaderList";
+import todayRankingList from "../mockData/Rankings/todayRankingList";
+import weekRankingList from "../mockData/Rankings/weekRankingList";
+import monthRankingList from "../mockData/Rankings/monthRankingList";
+import allRankingList from "../mockData/Rankings/allRankingList";
 
 const Rankings: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -84,180 +87,36 @@ const Rankings: React.FC = () => {
         </div>
         <div className="w-full">
           {activeTab === 0 && (
-            <div className="flex justify-center items-center w-full text-xl mt-8">
-              <div className="flex flex-col gap-5 w-full">
-                {/* header */}
-                <div className="flex w-full text-nowrap border-[0.5px] border-captiontext rounded-[1.25rem] px-5 py-2 text-base font-normal">
-                  <div className="w-[10%]">
-                    <p className="inline-block ml-3">#</p>
-                  </div>
-                  <div className="w-[40%]">
-                    <p>Artist</p>
-                  </div>
-                  <div className="w-[17%]">
-                    <p>Change</p>
-                  </div>
-                  <div className="w-[16%]">
-                    <p>NFTs Sold</p>
-                  </div>
-                  <div className="w-[17%]">
-                    <p>Volume</p>
-                  </div>
-                </div>
-                {/* body */}
-                <div className="flex w-full items-center text-nowrap text-left bg-bgsecondary rounded-[1.25rem] px-5 py-4">
-                  <div className="w-[10%]">
-                    <p className="inline-block  text-center h-8 w-8 rounded-full bg-bg">1</p>
-                  </div>
-                  <div className="w-[40%] flex gap-4 items-center">
-                    <img className='h-[2.2rem] w-[2.2rem] rounded-full' src={tempAvatar} alt="" />
-                    <p className="text-[1.375rem] font-semibold">Jaydon Ekstrom Bothman</p>
-                  </div>
-                  <div className="w-[17%]">
-                    <p className="text-[#00AC4F] font-normal text-base">+1.41%</p>
-                  </div>
-                  <div className="w-[16%]">
-                    <p className="font-normal text-base">602</p>
-                  </div>
-                  <div className="w-[17%]">
-                    <p className="font-normal text-base">12.4 ETH</p>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
+            <>
+              <HeaderList />
+              {todayRankingList.map((data, index) => (
+                <RankingLists key={index} data={data} />
+              ))}
+            </>
           )}
           {activeTab === 1 && (
-            <div className="flex justify-center items-center w-full text-xl mt-8">
-            <div className="flex flex-col gap-5 w-full">
-              {/* header */}
-              <div className="flex w-full text-nowrap border-[0.5px] border-captiontext rounded-[1.25rem] px-5 py-2 text-base font-normal">
-                <div className="w-[10%]">
-                  <p className="inline-block ml-3">#</p>
-                </div>
-                <div className="w-[40%]">
-                  <p>Artist</p>
-                </div>
-                <div className="w-[17%]">
-                  <p>Change</p>
-                </div>
-                <div className="w-[16%]">
-                  <p>NFTs Sold</p>
-                </div>
-                <div className="w-[17%]">
-                  <p>Volume</p>
-                </div>
-              </div>
-              {/* body */}
-              <div className="flex w-full items-center text-nowrap text-left bg-bgsecondary rounded-[1.25rem] px-5 py-4">
-                <div className="w-[10%]">
-                  <p className="inline-block  text-center h-8 w-8 rounded-full bg-bg">1</p>
-                </div>
-                <div className="w-[40%] flex gap-4 items-center">
-                  <img className='h-[2.2rem] w-[2.2rem] rounded-full' src={tempAvatar} alt="" />
-                  <p className="text-[1.375rem] font-semibold">Jaydon Ekstrom Bothman</p>
-                </div>
-                <div className="w-[17%]">
-                  <p className="text-[#00AC4F] font-normal text-base">+1.41%</p>
-                </div>
-                <div className="w-[16%]">
-                  <p className="font-normal text-base">602</p>
-                </div>
-                <div className="w-[17%]">
-                  <p className="font-normal text-base">12.4 ETH</p>
-                </div>
-              </div>
-              
-            </div>
-          </div>
+            <>
+              <HeaderList />
+              {weekRankingList.map((data, index) => (
+                <RankingLists key={index} data={data} />
+              ))}
+            </>
           )}
           {activeTab === 2 && (
-            <div className="flex justify-center items-center w-full text-xl mt-8">
-            <div className="flex flex-col gap-5 w-full">
-              {/* header */}
-              <div className="flex w-full text-nowrap border-[0.5px] border-captiontext rounded-[1.25rem] px-5 py-2 text-base font-normal">
-                <div className="w-[10%]">
-                  <p className="inline-block ml-3">#</p>
-                </div>
-                <div className="w-[40%]">
-                  <p>Artist</p>
-                </div>
-                <div className="w-[17%]">
-                  <p>Change</p>
-                </div>
-                <div className="w-[16%]">
-                  <p>NFTs Sold</p>
-                </div>
-                <div className="w-[17%]">
-                  <p>Volume</p>
-                </div>
-              </div>
-              {/* body */}
-              <div className="flex w-full items-center text-nowrap text-left bg-bgsecondary rounded-[1.25rem] px-5 py-4">
-                <div className="w-[10%]">
-                  <p className="inline-block  text-center h-8 w-8 rounded-full bg-bg">1</p>
-                </div>
-                <div className="w-[40%] flex gap-4 items-center">
-                  <img className='h-[2.2rem] w-[2.2rem] rounded-full' src={tempAvatar} alt="" />
-                  <p className="text-[1.375rem] font-semibold">Jaydon Ekstrom Bothman</p>
-                </div>
-                <div className="w-[17%]">
-                  <p className="text-[#00AC4F] font-normal text-base">+1.41%</p>
-                </div>
-                <div className="w-[16%]">
-                  <p className="font-normal text-base">602</p>
-                </div>
-                <div className="w-[17%]">
-                  <p className="font-normal text-base">12.4 ETH</p>
-                </div>
-              </div>
-              
-            </div>
-          </div>
+            <>
+              <HeaderList />
+              {monthRankingList.map((data, index) => (
+                <RankingLists key={index} data={data} />
+              ))}
+            </>
           )}
           {activeTab === 3 && (
-            <div className="flex justify-center items-center w-full text-xl mt-8">
-            <div className="flex flex-col gap-5 w-full">
-              {/* header */}
-              <div className="flex w-full text-nowrap border-[0.5px] border-captiontext rounded-[1.25rem] px-5 py-2 text-base font-normal">
-                <div className="w-[10%]">
-                  <p className="inline-block ml-3">#</p>
-                </div>
-                <div className="w-[40%]">
-                  <p>Artist</p>
-                </div>
-                <div className="w-[17%]">
-                  <p>Change</p>
-                </div>
-                <div className="w-[16%]">
-                  <p>NFTs Sold</p>
-                </div>
-                <div className="w-[17%]">
-                  <p>Volume</p>
-                </div>
-              </div>
-              {/* body */}
-              <div className="flex w-full items-center text-nowrap text-left bg-bgsecondary rounded-[1.25rem] px-5 py-4">
-                <div className="w-[10%]">
-                  <p className="inline-block  text-center h-8 w-8 rounded-full bg-bg">1</p>
-                </div>
-                <div className="w-[40%] flex gap-4 items-center">
-                  <img className='h-[2.2rem] w-[2.2rem] rounded-full' src={tempAvatar} alt="" />
-                  <p className="text-[1.375rem] font-semibold">Jaydon Ekstrom Bothman</p>
-                </div>
-                <div className="w-[17%]">
-                  <p className="text-[#00AC4F] font-normal text-base">+1.41%</p>
-                </div>
-                <div className="w-[16%]">
-                  <p className="font-normal text-base">602</p>
-                </div>
-                <div className="w-[17%]">
-                  <p className="font-normal text-base">12.4 ETH</p>
-                </div>
-              </div>
-              
-            </div>
-          </div>
+            <>
+              <HeaderList />
+              {allRankingList.map((data, index) => (
+                <RankingLists key={index} data={data} />
+              ))}
+            </>
           )}
         </div>
       </div>
