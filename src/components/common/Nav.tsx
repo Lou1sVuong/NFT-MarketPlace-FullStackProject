@@ -9,7 +9,8 @@ function Nav() {
 
   return (
     <nav
-      className={`flex z-10 items-center fixed justify-between w-full py-5 px-[3.125rem]  text-textW text-center text-base font-semibold bg-bgsecondary ${
+      className={`flex z-10 items-center fixed justify-between w-full py-5 px-[3.125rem]  text-textW text-center text-base font-semibold bg-bgsecondary 
+      ${
         scrollingUp ? "" : "hidden"
       }`}
     >

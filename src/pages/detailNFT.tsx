@@ -53,7 +53,7 @@ function detailNFT() {
             </div>
             <div className="flex gap-2">
               <img src={globe} alt="" />
-              <p>View on Etherscan</p>
+              <p>View Original</p>
             </div>
           </div>
           <div className="w-[60%] flex flex-col gap-3 ">
