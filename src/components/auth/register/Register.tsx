@@ -3,14 +3,29 @@ import Poster from "../../../assets/images/registerPage/Poster.png";
 import Button from "../../common/Button";
 import InputForm from "../../common/InputForm";
 import useScrollToTop from "../../../hooks/useScrollTop";
+import { useState } from "react";
 function Register() {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const registerUser = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
+
   useScrollToTop();
+
   return (
     <div className="w-full h-[40rem] flex gap-[3.75rem] text-textW bg-bg">
       <div className="w-[50%] overflow-hidden">
         <img src={Poster} alt="" className="w-full h-[40rem] object-cover " />
       </div>
-      <div className="flex flex-col justify-center items-center w-[50%]">
+      <form
+        onSubmit={registerUser}
+        className="flex flex-col justify-center items-center w-[50%]"
+      >
         <div className="flex flex-col justify-center items-center gap-8 w-[80%]">
           <h1 className="text-6xl font-semibold">Create account</h1>
           <p className="text-lg w-[25rem] text-center">
@@ -19,6 +34,8 @@ function Register() {
           </p>
           <div className="flex flex-col gap-5 w-[85%]">
             <InputForm
+              value={data.name}
+              onChange={(value) => setData({ ...data, name: value })}
               leftIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +61,9 @@ function Register() {
               placeholder="Username"
             />
             <InputForm
+              value={data.email}
+              onChange={(value) => setData({ ...data, email: value })}
+              type="email"
               leftIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +89,8 @@ function Register() {
               placeholder="Email Address"
             />
             <InputForm
+              value={data.password}
+              onChange={(value) => setData({ ...data, password: value })}
               type="password"
               leftIcon={
                 <svg
@@ -106,7 +128,9 @@ function Register() {
               }
               placeholder="Password"
             />
-            <Button style="tertiary">Create account</Button>
+            <Button type="submit" style="tertiary">
+              Create account
+            </Button>
           </div>
           <div>
             Already have an account?{" "}
@@ -115,7 +139,7 @@ function Register() {
             </Link>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

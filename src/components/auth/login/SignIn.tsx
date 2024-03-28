@@ -1,19 +1,33 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Poster from "../../../assets/images/registerPage/Poster.png";
 import Button from "../../common/Button";
 import InputForm from "../../common/InputForm";
 import useScrollToTop from "../../../hooks/useScrollTop";
+import { useState } from "react";
+import axios from "axios";
 
 function SignIn() {
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
+
   useScrollToTop();
 
+  const loginUser = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    axios.get("/");
+  };
   return (
     <>
       <div className="w-full h-[40rem] flex gap-[3.75rem] text-textW bg-bg">
         <div className="w-[50%] overflow-hidden">
           <img src={Poster} alt="" className="w-full h-[40rem] object-cover " />
         </div>
-        <div className="flex flex-col items-center w-[50%] pt-[6rem]">
+        <form
+          onSubmit={loginUser}
+          className="flex flex-col items-center w-[50%] pt-[6rem]"
+        >
           <div className="flex flex-col justify-center items-center gap-8 w-[80%]">
             <h1 className="text-6xl font-semibold">Sign In</h1>
             <div className="text-lg">
@@ -24,6 +38,8 @@ function SignIn() {
             </div>
             <div className="flex flex-col gap-5 w-[85%]">
               <InputForm
+                value={data.email}
+                onChange={(value) => setData({ ...data, email: value })}
                 leftIcon={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +65,8 @@ function SignIn() {
                 placeholder="Username Or Email Address"
               />
               <InputForm
+                value={data.password}
+                onChange={(value) => setData({ ...data, password: value })}
                 type="password"
                 leftIcon={
                   <svg
@@ -100,13 +118,15 @@ function SignIn() {
                   <Link to="/ResetPassword">Forgot password?</Link>
                 </div>
               </div>
-              <Button style="tertiary">Sign In</Button>
+              <Button type="submit" style="tertiary">
+                Sign In
+              </Button>
             </div>
             {/* <p>
                       Already have an account? <span className='text-callAcction'>Log in</span>
                       </p> */}
           </div>
-        </div>
+        </form>
       </div>
     </>
   );
