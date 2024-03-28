@@ -4,15 +4,35 @@ import Button from "../../common/Button";
 import InputForm from "../../common/InputForm";
 import useScrollToTop from "../../../hooks/useScrollTop";
 import { useState } from "react";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+
 function Register() {
+  const navigate = useNavigate();
   const [data, setData] = useState({
     name: "",
     email: "",
     password: "",
   });
 
-  const registerUser = (e: React.FormEvent<HTMLFormElement>) => {
+  const registerUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const { name, email, password } = data;
+    try {
+      const { data } = await axios.post("/Register", { name, email, password });
+      if (data.error) {
+        toast.error(data.error);
+      } else {
+        setData({ name: "", email: "", password: "" });
+        toast.success(
+          "Account created successfully! , Welcome to NFT Marketplace."
+        );
+        navigate("/SignIn");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useScrollToTop();
