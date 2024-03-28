@@ -11,7 +11,7 @@ axios.defaults.withCredentials = true;
 function App() {
   return (
     <>
-      <Toaster position="top-center" toastOptions={{ duration: 2000 }} />
+      <Toaster position="top-right" toastOptions={{ duration: 2000 }} />
       <Router>
         <Routes>
           {publicRoutes.map((route, index) => {

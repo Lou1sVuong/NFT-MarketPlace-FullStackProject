@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 function useScroll(): boolean {
-  const [scrollingUp, setScrollingUp] = useState<boolean>(true); 
+  const [scrollingUp, setScrollingUp] = useState<boolean>(true);
 
   useEffect(() => {
     let lastScrollTop: number = document.documentElement.scrollTop;
@@ -9,7 +9,7 @@ function useScroll(): boolean {
     const handleScroll = () => {
       const scrollTop: number = document.documentElement.scrollTop;
       setScrollingUp(scrollTop < lastScrollTop);
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      lastScrollTop = scrollTop <= 100 ? 100 : scrollTop;
     };
 
     window.addEventListener("scroll", handleScroll);
