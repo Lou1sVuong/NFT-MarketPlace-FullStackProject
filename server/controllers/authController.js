@@ -1,5 +1,7 @@
 const User = require("../models/User");
 const { hashPassword, comparePassword } = require("../helpers/auth");
+const jwt = require("jsonwebtoken");
+
 const test = (req, res) => {
   res.json("test is working");
 };
@@ -48,30 +50,33 @@ const signInUser = async (req, res) => {
     const user = await User.findOne({ email });
     if (!user) {
       return res.json({
-        error: "Incorrect Email or Password",
+        error: "Email or password is incorrect",
       });
     }
 
     // Check if password matches
     const match = await comparePassword(password, user.password);
-    if (!match) {
+    if (match) {
+      jwt.sign(
+        { email: user.email, id: user._id, name: user.name },
+        process.env.JWT_SECRET,
+        {},
+        (err, token) => {
+          if (err) {
+            console.log(err);
+            return res.json({ error: "SignIn Failed" });
+          }
+          res.cookie("token", token).json(user);
+        }
+      );
+    } else {
       return res.json({
-        error: "Incorrect Email or Password",
+        error: "Email or password is incorrect",
       });
     }
-
-    // If password is correct, return user login information
-    res.status(200).json({
-      user: {
-        _id: user._id,
-        email: user.email,
-        // Other user information
-      },
-      message: "Login successful",
-    });
   } catch (error) {
     console.log(error);
-    res.status(500).json({
+    res.json({
       error: "An error occurred while logging in",
     });
   }
