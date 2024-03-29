@@ -4,10 +4,11 @@ import Home from "../pages/Home";
 import SignIn from "../components/auth/login/SignIn";
 import MarketPlace from "../pages/MarketPlace";
 import Register from "../components/auth/register/Register";
-import ResetPass from "../components/auth/resetpass/ResetPass";
 import Rankings from "../pages/Rankings";
 import ArtistPage from "../pages/ArtistPage";
 import detailNFT from "../pages/detailNFT";
+import ResetPass from "../components/auth/resetpass/ResetPass";
+import Profile from "../pages/Profile";
 
 interface Route {
   path: string;
@@ -53,6 +54,11 @@ const publicRoutes: Route[] = [
   {
     path: "/ArtistPage",
     component: ArtistPage,
+    layout: MainLayout,
+  },
+  {
+    path: "/Profile",
+    component: Profile,
     layout: MainLayout,
   },
   {
