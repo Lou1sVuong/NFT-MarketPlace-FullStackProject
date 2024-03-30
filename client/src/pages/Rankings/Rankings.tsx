@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import RankingLists from "../components/rankingPage/RankingLists";
-import HeaderList from "../components/rankingPage/HeaderList";
-import todayRankingList from "../mockData/Rankings/todayRankingList";
-import weekRankingList from "../mockData/Rankings/weekRankingList";
-import monthRankingList from "../mockData/Rankings/monthRankingList";
-import allRankingList from "../mockData/Rankings/allRankingList";
-import useScrollToTop from "../hooks/useScrollTop";
-
+import RankingLists from "../../components/rankingPage/RankingLists";
+import HeaderList from "../../components/rankingPage/HeaderList";
+import todayRankingList from "../../mockData/Rankings/todayRankingList";
+import weekRankingList from "../../mockData/Rankings/weekRankingList";
+import monthRankingList from "../../mockData/Rankings/monthRankingList";
+import allRankingList from "../../mockData/Rankings/allRankingList";
+import useScrollToTop from "../../hooks/useScrollTop";
 
 const Rankings: React.FC = () => {
   useScrollToTop();

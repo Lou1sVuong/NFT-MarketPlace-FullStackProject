@@ -1,14 +1,14 @@
 import MainLayout from "../layouts/Mainlayout";
-import ConnectWallet from "../pages/ConnectWallet";
-import Home from "../pages/Home";
+import ConnectWallet from "../pages/ConnectWallet/ConnectWallet";
+import Home from "../pages/Home/Home";
 import SignIn from "../components/auth/login/SignIn";
-import MarketPlace from "../pages/MarketPlace";
+import MarketPlace from "../pages/MarketPlace/MarketPlace";
 import Register from "../components/auth/register/Register";
-import Rankings from "../pages/Rankings";
-import ArtistPage from "../pages/ArtistPage";
-import detailNFT from "../pages/detailNFT";
+import Rankings from "../pages/Rankings/Rankings";
+import ArtistPage from "../pages/ArtistPage/ArtistPage";
+import detailNFT from "../pages/detailNFT/detailNFT";
 import ResetPass from "../components/auth/resetpass/ResetPass";
-import Profile from "../pages/Profile";
+import Profile from "../pages/Profile/Profile";
 
 interface Route {
   path: string;

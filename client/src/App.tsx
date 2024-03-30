@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./Routes";
 import mainlayout from "./layouts/Mainlayout";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/NotFound/NotFound";
 import MainLayout from "./layouts/Mainlayout";
 import axios from "axios";
 import { Toaster } from "react-hot-toast";

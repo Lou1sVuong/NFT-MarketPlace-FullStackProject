@@ -1,8 +1,8 @@
-import mainImage from "../assets/images/detailNFT/PlaceHolder.svg";
-import globe from "../assets/icons/Globe.svg";
-import avatar from "../assets/images/avatars/PotraRobot.svg";
-import Countdown from "../components/homePage/Countdown";
-import Button from "../components/common/Button";
+import mainImage from "../../assets/images/detailNFT/PlaceHolder.svg";
+import globe from "../../assets/icons/Globe.svg";
+import avatar from "../../assets/images/avatars/PotraRobot.svg";
+import Countdown from "../../components/homePage/Countdown";
+import Button from "../../components/common/Button";
 function detailNFT() {
   return (
     <div className="w-full bg-bg text-textW">
@@ -18,19 +18,27 @@ function detailNFT() {
         <div className="w-[60%] flex flex-col gap-8">
           <div>
             <h1 className="text-[3.1875rem] font-semibold">The Orbitians</h1>
-            <p className="text-[1.375rem] font-normal text-captiontext">Minted on Sep 30, 2022</p>
+            <p className="text-[1.375rem] font-normal text-captiontext">
+              Minted on Sep 30, 2022
+            </p>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-[1.375rem] font-bold text-captiontext pt-[3rem]">Created By</h3>
+            <h3 className="text-[1.375rem] font-bold text-captiontext pt-[3rem]">
+              Created By
+            </h3>
             <div className="flex gap-3">
-              <img className="w-[2rem] h-[2rem] rounded-full" src={avatar} alt="" />
-              <p className="text-[1.375rem] font-semibold">
-                Orbitian
-              </p>
+              <img
+                className="w-[2rem] h-[2rem] rounded-full"
+                src={avatar}
+                alt=""
+              />
+              <p className="text-[1.375rem] font-semibold">Orbitian</p>
             </div>
           </div>
           <div>
-            <h3 className="text-[1.375rem] font-bold text-captiontext ">Description</h3>
+            <h3 className="text-[1.375rem] font-bold text-captiontext ">
+              Description
+            </h3>
             <p className="text-[1.375rem] font-normal text-justify">
               The Orbitians is a collection of 10,000 unique NFTs on the
               Ethereum blockchain,There are all sorts of beings in the NFT
@@ -46,7 +54,9 @@ function detailNFT() {
             </p>
           </div>
           <div className="flex flex-col gap-3">
-            <h3 className="text-[1.375rem] font-bold text-captiontext">Details</h3>
+            <h3 className="text-[1.375rem] font-bold text-captiontext">
+              Details
+            </h3>
             <div className="flex gap-2">
               <img src={globe} alt="" />
               <p>View on Etherscan</p>
@@ -59,9 +69,15 @@ function detailNFT() {
           <div className="w-[60%] flex flex-col gap-3 ">
             <h3 className="text-[1.375rem] font-bold text-captiontext">Tags</h3>
             <div className="">
-              <div className="inline-block py-2 px-4 bg-bgsecondary rounded-[1.25rem] mr-3 mb-3">Animation</div>
-              <div className="inline-block py-2 px-4 bg-bgsecondary rounded-[1.25rem] mr-3 mb-3">Illustration</div>
-              <div className="inline-block py-2 px-4 bg-bgsecondary rounded-[1.25rem] mr-3 mb-3">Moon</div>
+              <div className="inline-block py-2 px-4 bg-bgsecondary rounded-[1.25rem] mr-3 mb-3">
+                Animation
+              </div>
+              <div className="inline-block py-2 px-4 bg-bgsecondary rounded-[1.25rem] mr-3 mb-3">
+                Illustration
+              </div>
+              <div className="inline-block py-2 px-4 bg-bgsecondary rounded-[1.25rem] mr-3 mb-3">
+                Moon
+              </div>
             </div>
           </div>
         </div>

@@ -1,15 +1,15 @@
-import background from "../assets/images/artistPage/backgroundArtist.svg";
-import avatar from "../assets/images/artistPage/avt.png";
-import Button from "../components/common/Button";
-import DiscordLogo from "../assets/icons/DiscordLogo.svg";
-import YoutubeLogo from "../assets/icons/YoutubeLogo.svg";
-import TwitterLogo from "../assets/icons/TwitterLogo.svg";
-import InstagramLogo from "../assets/icons/InstagramLogo.svg";
-import Globe from "../assets/icons/Globe.svg";
+import background from "../../assets/images/artistPage/backgroundArtist.svg";
+import avatar from "../../assets/images/artistPage/avt.png";
+import Button from "../../components/common/Button";
+import DiscordLogo from "../../assets/icons/DiscordLogo.svg";
+import YoutubeLogo from "../../assets/icons/YoutubeLogo.svg";
+import TwitterLogo from "../../assets/icons/TwitterLogo.svg";
+import InstagramLogo from "../../assets/icons/InstagramLogo.svg";
+import Globe from "../../assets/icons/Globe.svg";
 import { useState } from "react";
-import NFTcard from "../components/homePage/NFTcard";
-import artistPage from "../mockData/ArtistPage/NFTs";
-import useScrollToTop from "../hooks/useScrollTop";
+import NFTcard from "../../components/homePage/NFTcard";
+import artistPage from "../../mockData/ArtistPage/NFTs";
+import useScrollToTop from "../../hooks/useScrollTop";
 
 interface MockData {
   totalSale: number;
@@ -44,8 +44,69 @@ function Profile() {
             <div className="flex  justify-between items-center ">
               <h2 className="text-[3.1875rem] font-semibold">Animakid</h2>
               <div className="flex gap-5">
-                <Button style="secondary">0xc0E3...B79C</Button>
-                <Button style="nofillSecondary">Follow</Button>
+                <Button
+                  leftIcon={
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4 16C4 15.4477 4.44772 15 5 15H27C27.5523 15 28 15.4477 28 16C28 16.5523 27.5523 17 27 17H5C4.44772 17 4 16.5523 4 16Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16 4C16.5523 4 17 4.44772 17 5V27C17 27.5523 16.5523 28 16 28C15.4477 28 15 27.5523 15 27V5C15 4.44772 15.4477 4 16 4Z"
+                        fill="white"
+                      />
+                    </svg>
+                  }
+                  style="secondary"
+                >
+                  New Product
+                </Button>
+                <Button
+                  leftIcon={
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 100 100"
+                      fill="none"
+                    >
+                      <path
+                        d="M7.8125 84.375H35.9375C39.9549 84.375 43.8821 83.1837 47.2225 80.9517C50.5629 78.7198 53.1664 75.5474 54.7038 71.8358C56.2412 68.1241 56.6435 64.04 55.8597 60.0997C55.0759 56.1595 53.1414 52.5402 50.3006 49.6994C47.4598 46.8586 43.8405 44.9241 39.9003 44.1403C35.96 43.3565 31.8759 43.7588 28.1642 45.2962C24.4526 46.8336 21.2802 49.4371 19.0483 52.7775C16.8163 56.1179 15.625 60.0451 15.625 64.0625C15.625 78.125 7.8125 84.375 7.8125 84.375Z"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M43.9058 45.3906C51.4058 35.2734 70.4683 12.1094 87.8901 12.1094C87.8901 29.5312 64.7261 48.5938 54.6089 56.0938"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M51.9531 35.3916C57.246 38.3787 61.6223 42.755 64.6094 48.0479"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  }
+                  style="nofillSecondary"
+                >
+                  Edit Profile
+                </Button>
               </div>
             </div>
             <div className="w-[30rem] grid grid-cols-3 pt-10">

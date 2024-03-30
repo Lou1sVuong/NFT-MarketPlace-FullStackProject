@@ -1,3 +1,5 @@
+import Copy from "../../assets/icons/Copy.svg";
+
 interface ArtistCardProps {
   data: {
     rank: number;
