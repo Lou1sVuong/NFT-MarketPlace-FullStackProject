@@ -3,7 +3,6 @@ import ConnectWallet from "../pages/ConnectWallet/ConnectWallet";
 import Home from "../pages/Home/Home";
 import SignIn from "../components/auth/login/SignIn";
 import Register from "../components/auth/register/Register";
-import Rankings from "../pages/Rankings/Rankings";
 import ArtistPage from "../pages/ArtistPage/ArtistPage";
 import detailNFT from "../pages/detailNFT/detailNFT";
 import ResetPass from "../components/auth/resetpass/ResetPass";
@@ -11,6 +10,11 @@ import Profile from "../pages/Profile/Profile";
 import MarketPlaceLayout from "../layouts/MarketPlaceLayout/MarketPlaceLayout";
 import NFTs from "../pages/MarketPlace/NFTs";
 import Collections from "../pages/MarketPlace/Collections";
+import RankingsLayout from "../layouts/RankingsLayout/RankingsLayout";
+import TodayRankings from "../pages/Rankings/TodayRankings";
+import WeekRankings from "../pages/Rankings/WeekRankings";
+import MonthRankings from "../pages/Rankings/MonthRankings";
+import AllTimeRankings from "../pages/Rankings/AllTimeRankings";
 
 interface Route {
   path: string;
@@ -44,11 +48,6 @@ const publicRoutes: Route[] = [
     layout: MainLayout,
   },
   {
-    path: "/Rankings",
-    component: Rankings,
-    layout: MainLayout,
-  },
-  {
     path: "/ArtistPage",
     component: ArtistPage,
     layout: MainLayout,
@@ -72,6 +71,26 @@ const publicRoutes: Route[] = [
     path: "/Marketplace/Collections",
     component: Collections,
     layout: MarketPlaceLayout,
+  },
+  {
+    path: "/Rankings/Today",
+    component: TodayRankings,
+    layout: RankingsLayout,
+  },
+  {
+    path: "/Rankings/ThisWeek",
+    component: WeekRankings,
+    layout: RankingsLayout,
+  },
+  {
+    path: "/Rankings/ThisMonth",
+    component: MonthRankings,
+    layout: RankingsLayout,
+  },
+  {
+    path: "/Rankings/AllTime",
+    component: AllTimeRankings,
+    layout: RankingsLayout,
   },
 ];
 const privateRoutes: Route[] = [];

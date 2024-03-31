@@ -23,7 +23,7 @@ function Nav() {
             <Link to="/Marketplace/NFTs">Marketplace</Link>
           </li>
           <li className="py-1 px-5">
-            <Link to="/Rankings">Rankings</Link>
+            <Link to="/Rankings/Today">Rankings</Link>
           </li>
           <li className="py-1 px-5">
             <Link to="/ConnectWallet">Connect a wallet</Link>
