@@ -20,7 +20,7 @@ function Nav() {
       <div className="flex items-center gap-5">
         <ul className="flex">
           <li className="py-1 px-5">
-            <Link to="/Marketplace">Marketplace</Link>
+            <Link to="/Marketplace/NFTs">Marketplace</Link>
           </li>
           <li className="py-1 px-5">
             <Link to="/Rankings">Rankings</Link>
