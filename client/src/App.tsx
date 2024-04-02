@@ -7,9 +7,10 @@ import axios from "axios";
 import { Toaster } from "react-hot-toast";
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
+import { UserContextProvider } from "../contexts/userContext";
 function App() {
   return (
-    <>
+    <UserContextProvider>
       <Toaster position="top-right" toastOptions={{ duration: 2000 }} />
       <Router>
         <Routes>
@@ -40,7 +41,7 @@ function App() {
           />
         </Routes>
       </Router>
-    </>
+    </UserContextProvider>
   );
 }
 

@@ -6,6 +6,7 @@ interface ButtonProps {
     | "nofillSecondary"
     | "tertiary"
     | "nofillTertiary"
+    | "HelloUser"
     | "white";
   rightIcon?: React.ReactNode;
   leftIcon?: React.ReactNode;
@@ -40,6 +41,8 @@ function Button({
         return "h-[2.875rem] border-2 border-solid border-callAcction text-textW";
       case "white":
         return "h-[3.75rem]  bg-white text-bg";
+      case "HelloUser":
+        return "h-[2.75rem] border-2 border-solid border-callAcction text-textW";
       default:
         return "";
     }

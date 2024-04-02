@@ -22,7 +22,8 @@ function InputForm({
 }: InputFormProps) {
   const [inputType, setInputType] = useState(type);
 
-  const togglePasswordVisibility = () => {
+  const togglePasswordVisibility = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault(); // Ngăn chặn hành vi mặc định của button
     setInputType((prevType) => (prevType === "password" ? "text" : "password"));
   };
 
